@@ -5,7 +5,7 @@ import gymHero from '@assets/unnamed_(1)_1784549434327.webp';
 import gymFloor from '@assets/unnamed_(3)_1784549434327.webp';
 import nutritionCounter from '@assets/unnamed_(2)_1784549434327.webp';
 import logoWall from '@assets/unnamed_1784549434327.webp';
-import coachPhoto from '@assets/coach_murad_enhanced.jpg';
+import coachPhoto from '@assets/images_1784549434326.jpg';
 import gymLogo from '@assets/306785182_599564255117677_6453341947498273876_n_1784549697731.jpg';
 
 /* ─── Intersection Observer hook for scroll animations ─── */
@@ -380,7 +380,12 @@ function Facilities() {
           </FadeIn>
           <FadeIn delay={100}>
             <div className="img-overlay rounded-2xl overflow-hidden h-72">
-              <img src={nutritionCounter} alt="Nutrition Life counter" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img
+                src={nutritionCounter}
+                alt="Nutrition Life counter"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                style={{ objectPosition: 'center bottom' }}
+              />
               <div className="absolute bottom-0 left-0 p-6 z-10">
                 <span className="text-white font-black text-xl uppercase">Nutrition Life</span>
               </div>
