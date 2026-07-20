@@ -5,7 +5,8 @@ import gymHero from '@assets/unnamed_(1)_1784549434327.webp';
 import gymFloor from '@assets/unnamed_(3)_1784549434327.webp';
 import nutritionCounter from '@assets/unnamed_(2)_1784549434327.webp';
 import logoWall from '@assets/unnamed_1784549434327.webp';
-import coachPhoto from '@assets/images_1784549434326.jpg';
+import coachPhoto from '@assets/coach_murad_enhanced.jpg';
+import gymLogo from '@assets/306785182_599564255117677_6453341947498273876_n_1784549697731.jpg';
 
 /* ─── Intersection Observer hook for scroll animations ─── */
 function useInView(threshold = 0.15) {
@@ -89,10 +90,8 @@ function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded bg-[#f5c400] flex items-center justify-center">
-            <span className="text-black font-black text-sm tracking-tight">FL</span>
-          </div>
+        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2 group">
+          <img src={gymLogo} alt="Fitness Life logo" className="w-10 h-10 rounded object-cover" />
           <span className="font-black text-white text-lg tracking-wide uppercase">
             Fitness <span style={{ color: '#f5c400' }}>Life</span>
           </span>
@@ -691,10 +690,8 @@ function Footer() {
   return (
     <footer style={{ background: '#080705', borderTop: '1px solid rgba(245,196,0,0.1)' }}>
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded bg-[#f5c400] flex items-center justify-center">
-            <span className="text-black font-black text-xs tracking-tight">FL</span>
-          </div>
+        <div className="flex items-center gap-2">
+          <img src={gymLogo} alt="Fitness Life logo" className="w-8 h-8 rounded object-cover" />
           <span className="font-black text-white text-sm uppercase tracking-wide">
             Fitness <span style={{ color: '#f5c400' }}>Life</span>
           </span>
