@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Fitness Life Gym"
+version = "1.0.0"
+id = "artifacts/fitness-life"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25065
+
+[services.development]
+run = "pnpm --filter @workspace/fitness-life run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/fitness-life", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/fitness-life/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25065"
+BASE_PATH = "/"
